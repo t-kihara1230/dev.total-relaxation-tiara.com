@@ -41,6 +41,9 @@ build() {
       -e "s/145, *110, *78/$rgbaDark/g" \
       "$f" > "$out/$f"
   done
+  # 8ページ間のナビゲーションリンクをフォルダ内の相対パスへ書き換え
+  # （色変更済みページ同士で遷移できるようにする）
+  python3 "$(dirname "$0")/_fix_links.py" "$out"
   echo "built: $out"
 }
 
