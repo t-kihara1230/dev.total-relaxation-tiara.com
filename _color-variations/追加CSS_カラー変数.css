@@ -10,18 +10,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,300;1,400&family=Shippori+Mincho:wght@400;500;600&display=swap');
 
 :root{
-  /* ===== ★ここだけ差し替える：サイトのテーマカラー ===== */
-  /*                     ベージュ(元)   セージ      アクア      ラベンダー  */
-  --tiara-accent:   #c19268; /*        #8fa37a    #6caba0    #9d8fb5  メイン色 */
-  --tiara-accent-d: #9a7048; /*        #5f7350    #4a8278    #71648c  濃アクセント（料金等） */
-  --tiara-soft:     #5c4a3a; /*        #4c5647    #45575a    #514a5a  やわらかい文字色 */
-  --tiara-ink:      #2e2620; /*        #29302a    #243030    #2b2730  本文の濃い文字色 */
-  --tiara-dark:     #2b211c; /*        #28302a    #213030    #292530  最も濃い背景（フッター等） */
-  --tiara-bg:       #fdfaf6; /*        #f8faf5    #f5fafa    #faf8fc  ベース背景 */
-  --tiara-bg-alt:   #f5ebdf; /*        #edf3e7    #e6f3f1    #efebf5  うすい背景（カード） */
-  --tiara-bg-warm:  #f0e3d0; /*        #e4eedb    #daeeeb    #e7e0f0  うすい背景2 */
-  --tiara-gold:     #d4b896; /*        #c1cfae    #a8d3cb    #c7bed6  明るい装飾 */
-  --tiara-blush:    #e8c9a0; /*        #d3e0bf    #c1e1da    #ddd2e6  明るい装飾2 */
+  /* ===== ★ここだけ差し替える：サイトのテーマカラー（ラベンダー系4案） ===== */
+  /* 実際に効くのは左の値（現在＝ラベンダーグレージュ）。
+     ブルー／モーブ／アイリスにする時は、各行の値を下表の該当列に書き換えます。 */
+  /*                    グレージュ(現) ブルー      モーブ      アイリス   */
+  --tiara-accent:   #9d8fb5; /*  #9d8fb5    #8f93c0    #b08fae    #8674ad  メイン色 */
+  --tiara-accent-d: #71648c; /*  #71648c    #62669a    #856488    #5e4f86  濃アクセント（料金等） */
+  --tiara-soft:     #514a5a; /*  #514a5a    #4c4f63    #5c4f5a    #4d465c  やわらかい文字色 */
+  --tiara-ink:      #2b2730; /*  #2b2730    #272834    #2f2830    #292533  本文の濃い文字色 */
+  --tiara-dark:     #292530; /*  #292530    #252634    #2e2630    #272233  最も濃い背景（フッター等） */
+  --tiara-bg:       #faf8fc; /*  #faf8fc    #f8f9fc    #fcf8fb    #f9f7fc  ベース背景 */
+  --tiara-bg-alt:   #efebf5; /*  #efebf5    #eceef5    #f4ebf2    #ede9f4  うすい背景（カード） */
+  --tiara-bg-warm:  #e7e0f0; /*  #e7e0f0    #e2e4f0    #efe0ec    #e3dcf0  うすい背景2 */
+  --tiara-gold:     #c7bed6; /*  #c7bed6    #bfc2d9    #d6bed3    #c4bad8  明るい装飾 */
+  --tiara-blush:    #ddd2e6; /*  #ddd2e6    #d3d6e8    #e6d2e2    #d8cce8  明るい装飾2 */
 
   /* ===== SWELLテーマ変数を上書き（ヘッダー・ボタン・見出し・フッター等に反映） ===== */
   --color_main:       var(--tiara-accent);
