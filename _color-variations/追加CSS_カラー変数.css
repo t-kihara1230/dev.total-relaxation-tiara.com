@@ -169,6 +169,11 @@ h1, h2, h3, h4, h5, h6 { font-family: "Shippori Mincho", "Noto Serif JP", serif;
 }
 .l-footer { margin-top: 0 !important; }
 
+/* フッター上下のボーダー（赤線）をフッター背景色に揃えて目立たなくする */
+.l-footer,
+.w-beforeFooter,
+#before_footer_widget { border-color: var(--color_footer_bg) !important; }
+
 /* パンくず・ページタイトル非表示 */
 .p-breadcrumb { display: none !important; }
 .c-pageTitle { display: none !important; }
