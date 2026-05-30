@@ -1,0 +1,207 @@
+/* =============================================================
+   トータルリラクゼーション ティアラ
+   追加CSS（外観 > カスタマイズ > 追加CSS に貼り付け）
+   ── 色は先頭の :root の値だけで一元管理します ──
+
+   ★サイトごとに変えるのは、下の「テーマカラー」10個の値だけ。
+     セージ／アクア／ラベンダーの値は各行のコメントに記載しています。
+   ============================================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,300;1,400&family=Shippori+Mincho:wght@400;500;600&display=swap');
+
+:root{
+  /* ===== ★ここだけ差し替える：サイトのテーマカラー ===== */
+  /*                     ベージュ(元)   セージ      アクア      ラベンダー  */
+  --tiara-accent:   #c19268; /*        #8fa37a    #6caba0    #9d8fb5  メイン色 */
+  --tiara-accent-d: #9a7048; /*        #5f7350    #4a8278    #71648c  濃アクセント（料金等） */
+  --tiara-soft:     #5c4a3a; /*        #4c5647    #45575a    #514a5a  やわらかい文字色 */
+  --tiara-ink:      #2e2620; /*        #29302a    #243030    #2b2730  本文の濃い文字色 */
+  --tiara-dark:     #2b211c; /*        #28302a    #213030    #292530  最も濃い背景（フッター等） */
+  --tiara-bg:       #fdfaf6; /*        #f8faf5    #f5fafa    #faf8fc  ベース背景 */
+  --tiara-bg-alt:   #f5ebdf; /*        #edf3e7    #e6f3f1    #efebf5  うすい背景（カード） */
+  --tiara-bg-warm:  #f0e3d0; /*        #e4eedb    #daeeeb    #e7e0f0  うすい背景2 */
+  --tiara-gold:     #d4b896; /*        #c1cfae    #a8d3cb    #c7bed6  明るい装飾 */
+  --tiara-blush:    #e8c9a0; /*        #d3e0bf    #c1e1da    #ddd2e6  明るい装飾2 */
+
+  /* ===== SWELLテーマ変数を上書き（ヘッダー・ボタン・見出し・フッター等に反映） ===== */
+  --color_main:       var(--tiara-accent);
+  --color_htag:       var(--tiara-accent);
+  --color_list_check: var(--tiara-accent);
+  --color_list_num:   var(--tiara-accent);
+  --color_text:       var(--tiara-ink);
+  --color_bg:         var(--tiara-bg);
+  --color_main_dark:  var(--tiara-accent-d);
+  --color_main_thin:  color-mix(in srgb, var(--tiara-accent) 8%, transparent);
+  --color_deep01:     var(--tiara-accent-d);
+  --color_deep02:     var(--tiara-bg-alt);
+  --color_deep03:     var(--tiara-bg-warm);
+  --color_deep04:     var(--tiara-blush);
+  --color_pale01:     var(--tiara-gold);
+  --color_pale02:     var(--tiara-ink);
+  --color_footer_bg:  var(--tiara-dark);
+  --color_footer_text:var(--tiara-bg);
+}
+
+/* ===== 以下は色を変数化しただけで、サイトごとの編集は不要です ===== */
+
+/* 本文・見出しフォント */
+body, .post_content { font-family: "Noto Sans JP", sans-serif; color: var(--tiara-ink); }
+h1, h2, h3, h4, h5, h6 { font-family: "Shippori Mincho", "Noto Serif JP", serif; font-weight: 400; letter-spacing: .05em; }
+
+/* 装飾用 斜体 */
+.tiara-italic, .tiara-italic *{ font-family: "Cormorant Garamond", serif; font-style: italic; }
+
+/* ラベル */
+.is-style-tiara-label{
+  font-family: "Cormorant Garamond", serif;
+  letter-spacing: .4em;
+  color: var(--tiara-accent);
+  font-size: 16px;
+  padding-left: .4em;
+}
+
+/* ご予約ボタン */
+.tiara-reserve-btn .wp-block-button__link {
+  background: #fff !important;
+  color: var(--tiara-dark) !important;
+  border-radius: 100px !important;
+  padding: 12px 20px !important;
+  font-size: 11px !important;
+  letter-spacing: .1em !important;
+  box-shadow: 0 6px 24px rgba(0,0,0,.12) !important;
+  border: none !important;
+  transition: background-color 0.2s, color 0.2s;
+}
+.tiara-reserve-btn .wp-block-button__link::before {
+  content: "";
+  display: inline-block;
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  background: var(--tiara-accent);
+  margin-right: 8px;
+  transition: background-color 0.2s;
+}
+.tiara-reserve-btn .wp-block-button__link:hover {
+  background: var(--tiara-dark) !important;
+  color: var(--tiara-bg) !important;
+}
+.tiara-reserve-btn .wp-block-button__link:hover::before {
+  background: var(--tiara-bg) !important;
+}
+
+/* メニューカード */
+.is-style-tiara-card{ background: var(--tiara-bg-alt); padding: 36px 28px; }
+.tiara-menu-num{
+  font-family: "Cormorant Garamond", serif !important;
+  font-style: italic !important;
+  font-size: 28px !important;
+  color: var(--tiara-accent) !important;
+  margin-bottom: 8px !important;
+  line-height: 1 !important;
+}
+.tiara-menu-jp{
+  font-family: "Shippori Mincho", "Noto Serif JP", serif !important;
+  font-size: 20px !important;
+  font-weight: 400 !important;
+  margin: 0 0 4px !important;
+  letter-spacing: .03em !important;
+}
+.tiara-menu-en{
+  font-family: "Cormorant Garamond", serif !important;
+  font-size: 13px !important;
+  letter-spacing: .2em !important;
+  color: var(--tiara-soft) !important;
+  margin-bottom: 20px !important;
+  padding-left: .2em;
+}
+.tiara-menu-desc{
+  font-size: 12px !important;
+  line-height: 1.9 !important;
+  color: var(--tiara-soft) !important;
+  margin-bottom: 20px !important;
+  min-height: 44px;
+}
+
+/* セクション余白 */
+.tiara-section{ padding: 100px 56px; }
+@media (max-width: 880px){ .tiara-section{ padding: 60px 20px; } }
+
+/* ヘッダーバー（茶色帯）非表示 */
+.l-header__bar,
+.l-headerBar,
+.c-headBar,
+.p-headBar,
+.swl-header-bar,
+.l-header > .c-headBar { display:none !important; }
+
+/* ヘッダーCTAメニューのボタン化 */
+.menu-item.tiara-btn{
+  align-self: center !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  height: auto !important;
+  margin: 0 4px !important;
+}
+.menu-item.tiara-btn > a{
+  display: inline-block !important;
+  padding: 6px 14px !important;
+  border-radius: 0 !important;
+  font-size: 11px !important;
+  line-height: 1.4 !important;
+  letter-spacing: .18em;
+  height: auto !important;
+  font-family: "Cormorant Garamond", serif;
+  transition: opacity .2s;
+}
+.menu-item.tiara-btn > a:hover{ opacity: .85; }
+
+/* LINEボタン（LINEブランド色＝そのまま） */
+.menu-item.tiara-btn-line > a{ background:#06c755 !important; color:#fff !important; }
+/* ご予約ボタン */
+.menu-item.tiara-btn-reserve > a{ background: var(--tiara-accent) !important; color:#fff !important; }
+
+/* フッター直前ウィジェット */
+#before_footer_widget,
+.w-beforeFooter {
+  background: var(--tiara-dark) !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+.l-footer { margin-top: 0 !important; }
+
+/* パンくず・ページタイトル非表示 */
+.p-breadcrumb { display: none !important; }
+.c-pageTitle { display: none !important; }
+
+/* 料金の文字デザイン */
+.post_content p.is-style-tiara-price {
+  font-family: "Cormorant Garamond", serif !important;
+  font-style: italic !important;
+  font-size: 28px !important;
+  color: var(--tiara-accent-d) !important;
+  letter-spacing: .02em !important;
+  line-height: 1 !important;
+}
+.post_content p.is-style-tiara-price::before {
+  content: "¥";
+  font-family: "Noto Sans JP", sans-serif !important;
+  font-style: normal !important;
+  font-size: 18px !important;
+  margin-right: 2px;
+  vertical-align: middle;
+}
+
+/* メニューとbody間の余白調整 */
+#content { padding-top: 0px !important; margin-top: 0px !important; }
+
+/* -------------------------------------------------------------
+   ③ ブロック本文に直接入った色（背景・区切り線など）への保険。
+   パレット化が難しい場合のフォールバックです。必要に応じて使用。
+   ※ 区切り線（カスタムカラー指定の <hr>）をメイン色に揃える例：
+   ------------------------------------------------------------- */
+/*
+.post_content hr.has-background[style*="background-color"]{
+  background-color: var(--tiara-accent) !important;
+  color: var(--tiara-accent) !important;
+}
+*/
