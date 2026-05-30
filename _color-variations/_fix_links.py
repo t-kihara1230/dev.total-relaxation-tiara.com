@@ -22,17 +22,6 @@ PAGES = {
 }
 
 
-# フッター(.l-footer)の上下ボーダー（赤線）を、フッター背景色 --color_footer_bg に揃える。
-# 各パレットの色変換でフッター背景は #28302a 等に置換済みのため、ボーダーが溶け込んで消える。
-FOOTER_FIX_ID = "tiara-footer-border-fix"
-FOOTER_FIX = (
-    '<style id="%s">'
-    '.l-footer,.w-beforeFooter,#before_footer_widget'
-    '{border-color:var(--color_footer_bg)!important}'
-    '</style>\n' % FOOTER_FIX_ID
-)
-
-
 def rewrite(root):
     count_files = 0
     count_links = 0
@@ -50,15 +39,12 @@ def rewrite(root):
                 rel = os.path.relpath(target, srcdir or ".")  # このページから見た相対パス
                 # href="URL" を href="相対パス" に（末尾の " まで含めて厳密一致）
                 html = html.replace('href="%s"' % url, 'href="%s"' % rel)
-            # フッター上下の赤いボーダーをフッター背景色に合わせる（赤線を消す）補正を注入
-            if FOOTER_FIX_ID not in html and "</head>" in html:
-                html = html.replace("</head>", FOOTER_FIX + "</head>", 1)
             if html != orig:
                 with open(fpath, "w", encoding="utf-8") as fh:
                     fh.write(html)
                 count_files += 1
                 count_links += orig.count('href="' + BASE)  # 概算
-    print("  links rewritten / footer-fix injected in %d files (%s)" % (count_files, root))
+    print("  links rewritten in %d files (%s)" % (count_files, root))
 
 
 if __name__ == "__main__":
