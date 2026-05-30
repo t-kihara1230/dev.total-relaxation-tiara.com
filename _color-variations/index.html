@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>カラーバリエーション プレビュー｜トータルリラクゼーション ティアラ</title>
+<style>
+  :root{ --ink:#33302c; --soft:#6f6a63; --line:#e7e2da; }
+  *{ box-sizing:border-box; }
+  body{
+    margin:0; color:var(--ink); background:#faf8f4;
+    font-family:"Hiragino Kaku Gothic ProN","Hiragino Sans",Meiryo,sans-serif;
+    line-height:1.8; -webkit-font-smoothing:antialiased;
+  }
+  .wrap{ max-width:1040px; margin:0 auto; padding:56px 20px 80px; }
+  header{ text-align:center; margin-bottom:48px; }
+  header .en{ font-family:Georgia,serif; font-style:italic; letter-spacing:.25em; color:var(--soft); font-size:14px; }
+  header h1{ font-weight:500; font-size:24px; margin:.3em 0 .4em; letter-spacing:.04em; }
+  header p{ color:var(--soft); font-size:14px; margin:0; }
+  .grid{ display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:28px; }
+  .card{
+    background:#fff; border:1px solid var(--line); border-radius:14px; overflow:hidden;
+    box-shadow:0 6px 24px rgba(0,0,0,.04); display:flex; flex-direction:column;
+  }
+  .swatch{ height:120px; display:flex; }
+  .swatch span{ flex:1; }
+  .card-body{ padding:22px 22px 24px; flex:1; display:flex; flex-direction:column; }
+  .card-body h2{ font-size:18px; font-weight:500; margin:0 0 2px; letter-spacing:.04em; }
+  .card-body .sub{ font-family:Georgia,serif; font-style:italic; letter-spacing:.12em; color:var(--soft); font-size:13px; margin-bottom:10px; }
+  .card-body .desc{ font-size:13px; color:var(--soft); margin:0 0 16px; }
+  .chips{ display:flex; flex-wrap:wrap; gap:6px; margin-bottom:18px; }
+  .chip{ font-size:11px; color:var(--soft); border:1px solid var(--line); border-radius:999px; padding:3px 10px; display:flex; align-items:center; gap:6px; }
+  .chip i{ width:10px; height:10px; border-radius:50%; display:inline-block; }
+  .links{ margin-top:auto; }
+  .links .main-link{
+    display:block; text-align:center; text-decoration:none; color:#fff;
+    border-radius:999px; padding:11px; font-size:14px; letter-spacing:.05em; margin-bottom:12px;
+    transition:opacity .2s;
+  }
+  .links .main-link:hover{ opacity:.85; }
+  .pages{ display:flex; flex-wrap:wrap; gap:6px 14px; font-size:12.5px; }
+  .pages a{ color:var(--soft); text-decoration:none; border-bottom:1px solid var(--line); }
+  .pages a:hover{ color:var(--ink); }
+  footer{ text-align:center; color:var(--soft); font-size:12px; margin-top:56px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="en">COLOR VARIATIONS</div>
+    <h1>カラーバリエーション プレビュー</h1>
+    <p>リラクゼーションサロンの「清潔感」と「癒し」をテーマにした3案です。各案をクリックして実際のページでご確認ください。</p>
+  </header>
+
+  <div class="grid">
+
+    <!-- 01 Sage Green -->
+    <div class="card">
+      <div class="swatch">
+        <span style="background:#8fa37a"></span>
+        <span style="background:#5f7350"></span>
+        <span style="background:#c1cfae"></span>
+        <span style="background:#edf3e7"></span>
+        <span style="background:#28302a"></span>
+      </div>
+      <div class="card-body">
+        <h2>セージグリーン</h2>
+        <div class="sub">Sage Green</div>
+        <p class="desc">ハーブや若葉を思わせる、自然でやさしい緑。心が落ち着く、ボタニカルで癒しのある印象です。</p>
+        <div class="chips">
+          <span class="chip"><i style="background:#8fa37a"></i>メイン #8fa37a</span>
+          <span class="chip"><i style="background:#5f7350"></i>アクセント #5f7350</span>
+          <span class="chip"><i style="background:#f8faf5"></i>背景 #f8faf5</span>
+        </div>
+        <div class="links">
+          <a class="main-link" style="background:#8fa37a" href="01-sage-green/index.html">この配色でトップを見る →</a>
+          <div class="pages">
+            <a href="01-sage-green/about/index.html">店舗紹介</a>
+            <a href="01-sage-green/menu/index.html">メニュー</a>
+            <a href="01-sage-green/menu/oilmassage/index.html">オイル</a>
+            <a href="01-sage-green/menu/thai_stretch/index.html">タイ式</a>
+            <a href="01-sage-green/menu/basic_massage/index.html">ボディ</a>
+            <a href="01-sage-green/menu/head_spa/index.html">ヘッドスパ</a>
+            <a href="01-sage-green/menu/campaign/index.html">キャンペーン</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 02 Aqua Mint -->
+    <div class="card">
+      <div class="swatch">
+        <span style="background:#6caba0"></span>
+        <span style="background:#4a8278"></span>
+        <span style="background:#a8d3cb"></span>
+        <span style="background:#e6f3f1"></span>
+        <span style="background:#213030"></span>
+      </div>
+      <div class="card-body">
+        <h2>アクアミント</h2>
+        <div class="sub">Aqua Mint</div>
+        <p class="desc">水や潤いを連想させる、透明感のある青緑。スパらしい清潔感と爽やかさを引き立てます。</p>
+        <div class="chips">
+          <span class="chip"><i style="background:#6caba0"></i>メイン #6caba0</span>
+          <span class="chip"><i style="background:#4a8278"></i>アクセント #4a8278</span>
+          <span class="chip"><i style="background:#f5fafa"></i>背景 #f5fafa</span>
+        </div>
+        <div class="links">
+          <a class="main-link" style="background:#6caba0" href="02-aqua-mint/index.html">この配色でトップを見る →</a>
+          <div class="pages">
+            <a href="02-aqua-mint/about/index.html">店舗紹介</a>
+            <a href="02-aqua-mint/menu/index.html">メニュー</a>
+            <a href="02-aqua-mint/menu/oilmassage/index.html">オイル</a>
+            <a href="02-aqua-mint/menu/thai_stretch/index.html">タイ式</a>
+            <a href="02-aqua-mint/menu/basic_massage/index.html">ボディ</a>
+            <a href="02-aqua-mint/menu/head_spa/index.html">ヘッドスパ</a>
+            <a href="02-aqua-mint/menu/campaign/index.html">キャンペーン</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 03 Lavender Greige -->
+    <div class="card">
+      <div class="swatch">
+        <span style="background:#9d8fb5"></span>
+        <span style="background:#71648c"></span>
+        <span style="background:#c7bed6"></span>
+        <span style="background:#efebf5"></span>
+        <span style="background:#292530"></span>
+      </div>
+      <div class="card-body">
+        <h2>ラベンダーグレージュ</h2>
+        <div class="sub">Lavender Greige</div>
+        <p class="desc">アロマや藤を思わせる、上品でやわらかな藤色。リラックス感と落ち着いた高級感を演出します。</p>
+        <div class="chips">
+          <span class="chip"><i style="background:#9d8fb5"></i>メイン #9d8fb5</span>
+          <span class="chip"><i style="background:#71648c"></i>アクセント #71648c</span>
+          <span class="chip"><i style="background:#faf8fc"></i>背景 #faf8fc</span>
+        </div>
+        <div class="links">
+          <a class="main-link" style="background:#9d8fb5" href="03-lavender-greige/index.html">この配色でトップを見る →</a>
+          <div class="pages">
+            <a href="03-lavender-greige/about/index.html">店舗紹介</a>
+            <a href="03-lavender-greige/menu/index.html">メニュー</a>
+            <a href="03-lavender-greige/menu/oilmassage/index.html">オイル</a>
+            <a href="03-lavender-greige/menu/thai_stretch/index.html">タイ式</a>
+            <a href="03-lavender-greige/menu/basic_massage/index.html">ボディ</a>
+            <a href="03-lavender-greige/menu/head_spa/index.html">ヘッドスパ</a>
+            <a href="03-lavender-greige/menu/campaign/index.html">キャンペーン</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <footer>
+    ※ 元デザイン（ベージュ／ブラウン系）のレイアウトはそのままに、ブランドカラーのみを差し替えています。<br>
+    成功・注意などの機能的なアイコン色は視認性のため変更していません。
+  </footer>
+</div>
+</body>
+</html>
